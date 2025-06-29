@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+<div class="container px-4 py-5 my-5 text-center shadow-sm">
+  <h1 class="display-5 fw-bold text-body-emphasis">New Travel Blog</h1>
+</div>
+
+<div class="container-xl">
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-9 border border-secondary rounded p-4 shadow-sm">
+      <form action="/submit" method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label"
+            >Title</label
+          >
+          <input
+            type="text"
+            class="form-control border-secondary"
+            id="title" name="title"
+            placeholder="Travel diaries India"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label"
+            >Content</label
+          >
+          <textarea
+            class="form-control border-secondary"
+            id="content" name="content"
+            rows="10"
+          ></textarea>
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">
+            Create Post
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer.ejs') %>

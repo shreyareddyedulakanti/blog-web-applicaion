@@ -1,0 +1,51 @@
+<%- include('partials/header.ejs') %>
+<div class="container px-4 py-5 my-5 text-center shadow-sm">
+  <h1 class="display-5 fw-bold text-body-emphasis">Travel Blog</h1>
+  <h2 class="display-6 mb-2">Your place for viewing your past journey</h2>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+      This is a site for personal travel blog or note taker for anyone
+      travelling around and want to take note of what they have viewed.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center mb-2">
+    <% if ((locals.posts) && (locals.posts.length != 0)) { %> <% for(let blog of
+    posts) { %>
+    <div class="col-md-10">
+      <div
+        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 bg-white"
+      >
+        <div
+          class="col p-4 d-flex flex-column align-items-start justify-content-between"
+        >
+          <div>
+            <h3 class="mb-2"><%=blog.title%></h3>
+            <div class="mb-2">
+              <p class="card-text blog-content"><%=blog.content%></p>
+            </div>
+          </div>
+
+          <div>
+            <a href="/update/<%=blog.id%>" class="btn btn-secondary">Edit</a>
+            <a
+              href="/delete/<%=blog.id%>"
+              class="btn btn-danger"
+              onclick="return confirm(`Are you sure you want to delete <%=blog.title%>`)"
+              >Delete</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %> <%} else { %>
+    <div class="col p-4 mb-2 d-flex flex-column align-items-center text-center">
+      <h3>No Posts Yet!</h3>
+      <% } %>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+  </div>
+</div>
