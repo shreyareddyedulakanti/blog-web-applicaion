@@ -14,32 +14,24 @@
   <div class="row justify-content-center mb-2">
     <% if ((locals.posts) && (locals.posts.length != 0)) { %> <% for(let blog of
     posts) { %>
-    <div class="col-md-10">
-      <div
-        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 bg-white"
+    <div
+        class=""
       >
         <div
-          class="col p-4 d-flex flex-column align-items-start justify-content-between"
+          class="row align-items-center justify-content-between homepage-blog-list p-4 border rounded flex-column flex-sm-row mb-4 shadow-sm h-md-250 bg-white"
         >
-          <div>
-            <h3 class="mb-2"><%=blog.title%></h3>
+          <div class="col col-sm-10">
+            <h3 class="mb-2"><a href="/blog/<%=blog.id%>" class="text-body-secondary fw-bold"><%=blog.title%></a></h3>
             <div class="mb-2">
-              <p class="card-text blog-content"><%=blog.content%></p>
+              <p class="card-text"><%=blog.shortDescription%></p>
             </div>
           </div>
 
-          <div>
-            <a href="/update/<%=blog.id%>" class="btn btn-secondary">Edit</a>
-            <a
-              href="/delete/<%=blog.id%>"
-              class="btn btn-danger"
-              onclick="return confirm(`Are you sure you want to delete <%=blog.title%>`)"
-              >Delete</a
-            >
+          <div class="col col-sm-2 text-sm-end">
+            <a href="/blog/<%=blog.id%>" class="btn btn-secondary">Read More</a>
           </div>
         </div>
       </div>
-    </div>
     <% } %> <%} else { %>
     <div class="col p-4 mb-2 d-flex flex-column align-items-center text-center">
       <h3>No Posts Yet!</h3>

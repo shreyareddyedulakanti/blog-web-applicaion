@@ -30,7 +30,6 @@ https://blog-web-application-8lzt.onrender.com/
 | DELETE | `/delete/:id`    | Delete a post       |
 |   -    | Any invalid url  | Page not found      |
 
-Removed the individual page for a blog post. Add later with the read more feature on the homepage.
 
 ### Installation
 ```

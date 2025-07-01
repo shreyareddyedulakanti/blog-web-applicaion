@@ -1,3 +1,7 @@
+.homepage-blog-list h3 a {
+  text-decoration: none;
+}
+
 .blog-content {
   white-space: pre-wrap;
 }
