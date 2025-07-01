@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.render('index.ejs', { posts });
 });
 
-// Removed an did only nec
+// Removed temporarily to implement read more on homepage
 // app.get('/blog/:id', (req, res) => {
 //   const id = req.params.id;
 //   const post = posts.find((post) => post.id === Number(id));
@@ -76,9 +76,9 @@ app.post('/submit', (req, res) => {
   res.redirect('/');
 });
 
-// 🧨 Catch-all for any undefined URL
+// For any undefined URL
 app.use((req, res) => {
-  res.status(404).render('error.ejs'); // Show 404.ejs
+  res.status(404).render('error.ejs');
 });
 
 app.listen(port, () => {
