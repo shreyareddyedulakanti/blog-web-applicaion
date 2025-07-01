@@ -24,11 +24,13 @@ https://blog-web-application-8lzt.onrender.com/
 | Method | Endpoint         | Description         |
 |--------|------------------|---------------------|
 | GET    | `/`              | Get all posts       |
+| GET    | `/blog:id`       | Individual post     |
 | POST   | `/new`           | Create a new post   |
 | PUT    | `/update/:id`    | Update a post       |
 | DELETE | `/delete/:id`    | Delete a post       |
+|   -    | Any invalid url  | Page not found      |
 
-Removed the individual page for a blog post. Will add later with read more feature on homepage.
+Removed the individual page for a blog post. Add later with the read more feature on the homepage.
 
 ### Installation
 ```
