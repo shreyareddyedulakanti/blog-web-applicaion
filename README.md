@@ -31,9 +31,19 @@ https://blog-web-application-8lzt.onrender.com/
 |   -    | Any invalid url  | Page not found      |
 
 
-### Installation
+### Installation & running the program
+
+For project creation and installation
+
 ```
 mkdir 'blog web application'
 cd 'blog web application'
 npm i
+npm i express
+npm i ejs
+```
+
+Project running commands:
+```
+npm start
 ```
