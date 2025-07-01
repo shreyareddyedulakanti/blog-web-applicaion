@@ -30,8 +30,7 @@ https://blog-web-application-8lzt.onrender.com/
 
 Removed the individual page for a blog post. Will add later with read more feature on homepage.
 
-### Project
-- Installation
+### Installation
 ```
 mkdir 'blog web application'
 cd 'blog web application'
